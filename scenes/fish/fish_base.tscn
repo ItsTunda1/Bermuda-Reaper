@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://d2ff31m4pjl3p"]
+[gd_scene load_steps=2 format=3 uid="uid://bcsbwff13a2p2"]
 
 [ext_resource type="Script" uid="uid://b1torvnpbju1x" path="res://scenes/fish/fish_base.gd" id="1_pv6ho"]
 

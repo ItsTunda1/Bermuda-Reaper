@@ -18,6 +18,9 @@ func NormalDistribution(x: int):
 func _ready():
 	print(NormalDistribution(101));
 	
+func Behavior():
+	print("Fishy")
+	
 	
 # Calc the min and max range
 # (1/std)^((-1/2)*((X-m)/s)^2) >= 0.015
