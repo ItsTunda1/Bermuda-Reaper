@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://7511pwr6qk5j"]
+
+[ext_resource type="PackedScene" uid="uid://dnolldljhyjij" path="res://scenes/fish/fish.tscn" id="1_4s0hg"]
+[ext_resource type="Script" uid="uid://b51frk1yul3el" path="res://scripts/fish/fish2.gd" id="2_fqapl"]
+
+[node name="Fish" instance=ExtResource("1_4s0hg")]
+script = ExtResource("2_fqapl")
