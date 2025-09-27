@@ -2,7 +2,7 @@ extends Node2D
 
 @export var theFish : fish;
 
-@export var fishScene = preload("res://fish.tscn");
+@export var fishScene = preload("res://scenes/fish/fish.tscn");
 
 #func _init():
 
