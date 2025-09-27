@@ -10,7 +10,6 @@ var offset: Vector2 = Vector2(400, 400);
 var dist_x = triangle_size/2;
 var dist_y = triangle_size*sqrt(3)/4;
 func place_triangles(layer: int, n: int, offset_x: int):
-	print(layer)
 	for i in layer:
 		# Spawning
 		var tile = preload("res://scenes/fish/fish2.tscn").instantiate();
