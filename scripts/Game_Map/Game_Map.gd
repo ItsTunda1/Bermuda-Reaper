@@ -32,7 +32,7 @@ func place_triangles(layer: int, n: int, offset_x: int):
 var start_loc: int = 0;
 
 func _ready():
-	for layer_idx in n/2+1:
+	for layer_idx in n:
 		# place triangles
-		var layer_size: int = (n-layer_idx*2);
+		var layer_size: int = (n-layer_idx)*2-1;
 		start_loc = place_triangles(layer_size, layer_idx, start_loc);  # FUNCTION CALL (func located AFTER MAIN BLOCK)
