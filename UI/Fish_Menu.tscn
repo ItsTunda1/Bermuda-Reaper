@@ -31,36 +31,43 @@ size_flags_stretch_ratio = 0.5
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Fish Types" type="VBoxContainer" parent="Main Separator"]
+[node name="ScrollContainer" type="ScrollContainer" parent="Main Separator"]
+layout_mode = 2
+size_flags_horizontal = 3
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 0
+
+[node name="Fish Types" type="VBoxContainer" parent="Main Separator/ScrollContainer"]
+custom_minimum_size = Vector2(0, 650)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.6
 
-[node name="Fish" type="Panel" parent="Main Separator/Fish Types"]
+[node name="Fish" type="Panel" parent="Main Separator/ScrollContainer/Fish Types"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_w6b5f")
 
-[node name="Fish2" type="Panel" parent="Main Separator/Fish Types"]
+[node name="Fish2" type="Panel" parent="Main Separator/ScrollContainer/Fish Types"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_w6b5f")
 
-[node name="Fish3" type="Panel" parent="Main Separator/Fish Types"]
+[node name="Fish3" type="Panel" parent="Main Separator/ScrollContainer/Fish Types"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_w6b5f")
 
-[node name="Fish4" type="Panel" parent="Main Separator/Fish Types"]
+[node name="Fish4" type="Panel" parent="Main Separator/ScrollContainer/Fish Types"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_w6b5f")
 
-[node name="Fish5" type="Panel" parent="Main Separator/Fish Types"]
+[node name="Fish5" type="Panel" parent="Main Separator/ScrollContainer/Fish Types"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
