@@ -14,3 +14,7 @@ config/name="Bermuda Reaper"
 run/main_scene="uid://cga3sx1yjg2bd"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://gfx/icon.svg"
+
+[gui]
+
+theme/default_font_multichannel_signed_distance_field=true
