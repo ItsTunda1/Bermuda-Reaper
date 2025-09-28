@@ -1,7 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://dojl217eaeyuj"]
+[gd_scene load_steps=3 format=3 uid="uid://dojl217eaeyuj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w6b5f"]
+bg_color = Color(1.10701e-06, 0.278143, 0.400463, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nqses"]
-bg_color = Color(1, 0.45, 0, 1)
+bg_color = Color(0.397255, 0.161482, 0, 1)
 
 [node name="menu" type="Control"]
 layout_mode = 3
@@ -11,7 +14,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="Main Separator" type="HBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -19,11 +22,100 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Panel" type="Panel" parent="HBoxContainer"]
+[node name="BoxContainer" type="BoxContainer" parent="Main Separator"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+
+[node name="Radar View" type="Panel" parent="Main Separator/BoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Panel2" type="Panel" parent="HBoxContainer"]
+[node name="Fish Types" type="VBoxContainer" parent="Main Separator"]
 layout_mode = 2
 size_flags_horizontal = 3
+
+[node name="Fish Data" type="HBoxContainer" parent="Main Separator/Fish Types"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Fish" type="Panel" parent="Main Separator/Fish Types/Fish Data"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_w6b5f")
+
+[node name="Depth" type="Panel" parent="Main Separator/Fish Types/Fish Data"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_nqses")
+
+[node name="Fish Data2" type="HBoxContainer" parent="Main Separator/Fish Types"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Fish" type="Panel" parent="Main Separator/Fish Types/Fish Data2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_w6b5f")
+
+[node name="Depth" type="Panel" parent="Main Separator/Fish Types/Fish Data2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_nqses")
+
+[node name="Fish Data3" type="HBoxContainer" parent="Main Separator/Fish Types"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Fish" type="Panel" parent="Main Separator/Fish Types/Fish Data3"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_w6b5f")
+
+[node name="Depth" type="Panel" parent="Main Separator/Fish Types/Fish Data3"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_nqses")
+
+[node name="Fish Data4" type="HBoxContainer" parent="Main Separator/Fish Types"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Fish" type="Panel" parent="Main Separator/Fish Types/Fish Data4"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_w6b5f")
+
+[node name="Depth" type="Panel" parent="Main Separator/Fish Types/Fish Data4"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_nqses")
+
+[node name="Fish Data5" type="HBoxContainer" parent="Main Separator/Fish Types"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Fish" type="Panel" parent="Main Separator/Fish Types/Fish Data5"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_w6b5f")
+
+[node name="Depth" type="Panel" parent="Main Separator/Fish Types/Fish Data5"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_nqses")
