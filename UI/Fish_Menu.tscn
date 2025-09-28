@@ -4,7 +4,7 @@
 bg_color = Color(1.10701e-06, 0.278143, 0.400463, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nqses"]
-bg_color = Color(0.397255, 0.161482, 0, 1)
+bg_color = Color(0.0466641, 2.9077e-05, 0.188685, 1)
 
 [node name="menu" type="Control"]
 layout_mode = 3
@@ -34,88 +34,44 @@ size_flags_horizontal = 3
 [node name="Fish Types" type="VBoxContainer" parent="Main Separator"]
 layout_mode = 2
 size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.6
 
-[node name="Fish Data" type="HBoxContainer" parent="Main Separator/Fish Types"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="Fish" type="Panel" parent="Main Separator/Fish Types/Fish Data"]
+[node name="Fish" type="Panel" parent="Main Separator/Fish Types"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_w6b5f")
 
-[node name="Depth" type="Panel" parent="Main Separator/Fish Types/Fish Data"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_styles/panel = SubResource("StyleBoxFlat_nqses")
-
-[node name="Fish Data2" type="HBoxContainer" parent="Main Separator/Fish Types"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="Fish" type="Panel" parent="Main Separator/Fish Types/Fish Data2"]
+[node name="Fish2" type="Panel" parent="Main Separator/Fish Types"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_w6b5f")
 
-[node name="Depth" type="Panel" parent="Main Separator/Fish Types/Fish Data2"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_styles/panel = SubResource("StyleBoxFlat_nqses")
-
-[node name="Fish Data3" type="HBoxContainer" parent="Main Separator/Fish Types"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="Fish" type="Panel" parent="Main Separator/Fish Types/Fish Data3"]
+[node name="Fish3" type="Panel" parent="Main Separator/Fish Types"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_w6b5f")
 
-[node name="Depth" type="Panel" parent="Main Separator/Fish Types/Fish Data3"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_styles/panel = SubResource("StyleBoxFlat_nqses")
-
-[node name="Fish Data4" type="HBoxContainer" parent="Main Separator/Fish Types"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="Fish" type="Panel" parent="Main Separator/Fish Types/Fish Data4"]
+[node name="Fish4" type="Panel" parent="Main Separator/Fish Types"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_w6b5f")
 
-[node name="Depth" type="Panel" parent="Main Separator/Fish Types/Fish Data4"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_styles/panel = SubResource("StyleBoxFlat_nqses")
-
-[node name="Fish Data5" type="HBoxContainer" parent="Main Separator/Fish Types"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="Fish" type="Panel" parent="Main Separator/Fish Types/Fish Data5"]
+[node name="Fish5" type="Panel" parent="Main Separator/Fish Types"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_w6b5f")
 
-[node name="Depth" type="Panel" parent="Main Separator/Fish Types/Fish Data5"]
+[node name="BoxContainer2" type="BoxContainer" parent="Main Separator"]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 3
+size_flags_stretch_ratio = 0.8
+
+[node name="Depths" type="Panel" parent="Main Separator/BoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_nqses")
