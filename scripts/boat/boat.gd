@@ -24,7 +24,7 @@ func get_input_vector():
 	return input_vector
 	
 func _process(delta):
-	pass;
+	move_in_direction();
 
 func move_in_direction():
 	var move_dir=get_input_vector()
