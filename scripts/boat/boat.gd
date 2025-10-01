@@ -23,8 +23,19 @@ func get_input_vector():
 	
 	return input_vector
 	
+var is_mouse_down = false  # Flag to check if the mouse was just pressed
 func _process(delta):
 	move_in_direction();
+	
+	# radar call for mouse down
+	# Check if the left mouse button is pressed and not already triggered
+	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and not is_mouse_down:
+		radar()
+		is_mouse_down = true  # Set flag to prevent continuous calling
+
+	# Reset flag when mouse button is released
+	if not Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+		is_mouse_down = false  # Allow the radar function to be called again next time
 
 func move_in_direction():
 	var move_dir=get_input_vector()
@@ -32,3 +43,17 @@ func move_in_direction():
 	if move_dir != Vector2(0.,0.):
 		rotation=move_dir.angle()
 	pass;
+
+
+
+
+
+
+
+
+# RADAR SYSTEM
+#==============
+
+func radar():
+	# Fix spamming
+	print("radar")
