@@ -6,6 +6,12 @@ var RadarDotScene = preload("res://UI/RadarDot.tscn")
 @onready var radar_container = $CanvasLayer/RadarContainer
 var radar_points = [Vector2(10, 20), Vector2(-50, 30)]
 
+# Boat
+var boat: boat;
+
+func _ready():
+	boat = get_node("../Boat")
+
 
 
 @export var radar_size = Vector2(200, 200)
@@ -19,9 +25,10 @@ func update_radar(points: Array):
 
 	# Add current
 	for point in points:
-		var dot = RadarDotScene.instantiate()
-		radar_container.add_child(dot)
-		dot.position = convert_to_radar_position(point)
+		if (boat.position.distance_squared_to(Vector2(point))/1000 <= 100):
+			var dot = RadarDotScene.instantiate()
+			radar_container.add_child(dot)
+			dot.position = convert_to_radar_position(point)
 
 func convert_to_radar_position(world_offset: Vector2) -> Vector2:
 	var normalized = world_offset / radar_range  # range -1 to 1
