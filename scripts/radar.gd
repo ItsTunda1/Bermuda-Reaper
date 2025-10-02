@@ -6,6 +6,9 @@ var RadarDotScene = preload("res://UI/RadarDot.tscn")
 @onready var radar_container = $CanvasLayer/RadarContainer
 var radar_points = [Vector2(10, 20), Vector2(-50, 30)]
 
+# Wiper Anim
+@onready var wiper = $CanvasLayer/RadarContainer/Wiper
+
 # Boat
 var boat: boat;
 
@@ -36,7 +39,7 @@ func convert_to_radar_position(world_offset: Vector2) -> Vector2:
 	return radar_pos
 	
 	
-func _process(_delta):
+func _process(delta):
 	var player_pos = Vector2(0, 0)
 	radar_points[0].x += 10;
 	
@@ -48,3 +51,7 @@ func _process(_delta):
 		points.append(offset)
 
 	update_radar(points)
+	
+	
+	# Move Wiper
+	wiper.rotation_degrees += 2.0
