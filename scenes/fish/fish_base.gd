@@ -18,7 +18,10 @@ func NormalDistribution(x: int):
 func _ready():
 	print(NormalDistribution(101));
 	
-func Behavior():
+func Swim_Behavior():
+	print("Fishy")
+	
+func Radar_Behavior():
 	print("Fishy")
 	
 	
