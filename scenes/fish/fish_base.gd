@@ -22,10 +22,18 @@ func _ready():
 	add_to_group("radar_objects")
 	
 func Swim_Behavior():
-	print("Fishy")
+	#print("Fishy")
+	position.x += 1;
+	position.y += 0.2;
 	
 func Radar_Behavior():
 	print("Fishy")
+	
+	
+	
+	
+func _process(_delta):
+	Swim_Behavior()
 	
 	
 # Calc the min and max range
