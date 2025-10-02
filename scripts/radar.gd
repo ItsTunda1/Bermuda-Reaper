@@ -25,7 +25,7 @@ func update_radar(points: Array):
 
 func convert_to_radar_position(world_offset: Vector2) -> Vector2:
 	var normalized = world_offset / radar_range  # range -1 to 1
-	var radar_pos = (normalized * (radar_size * 0.5)) + (radar_size * 0.5)
+	var radar_pos = (normalized * (radar_size * 0.5))
 	return radar_pos
 	
 	
