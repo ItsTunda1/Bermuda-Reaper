@@ -11,7 +11,7 @@ var timer := 0.0
 var fading := false
 
 func _ready():
-	color_rect = $ColorRect  # Adjust this path if needed
+	color_rect = $ColorRect
 	await get_tree().create_timer(delay_before_fade).timeout
 	fading = true
 
