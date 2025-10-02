@@ -31,7 +31,7 @@ func convert_to_radar_position(world_offset: Vector2) -> Vector2:
 	
 func _process(_delta):
 	var player_pos = Vector2(0, 0)
-	radar_points[0].x = radar_points[0].x + 10;
+	radar_points[0].x += 10;
 	
 	
 	'var points = []
