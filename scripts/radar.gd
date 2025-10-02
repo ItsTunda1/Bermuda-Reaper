@@ -34,12 +34,10 @@ func _process(_delta):
 	radar_points[0].x += 10;
 	
 	
-	'var points = []
+	var points = []
 
 	for obj in get_tree().get_nodes_in_group("radar_objects"):
 		var offset = obj.global_position - player_pos
 		points.append(offset)
 
-	update_radar(points)'
-	
-	update_radar(radar_points)
+	update_radar(points)

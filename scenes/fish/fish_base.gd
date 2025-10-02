@@ -18,6 +18,9 @@ func NormalDistribution(x: int):
 func _ready():
 	print(NormalDistribution(101));
 	
+	# Show on Radar
+	add_to_group("radar_objects")
+	
 func Swim_Behavior():
 	print("Fishy")
 	
