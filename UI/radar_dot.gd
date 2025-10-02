@@ -3,7 +3,7 @@ extends Node2D
 
 
 
-@export var delay_before_fade: float = 2.0   # Seconds to wait before fading
+@export var delay_before_fade: float = 0.5   # Seconds to wait before fading
 @export var fade_duration: float = 1.5       # Duration of fade out
 
 var color_rect: ColorRect
