@@ -19,9 +19,9 @@ func _ready():
 
 
 func update_radar(points: Array):
-	# Clear existing dots
+	'# Clear existing dots
 	for child in radar_container.get_children():
-		child.queue_free()
+		child.queue_free()'
 
 	# Add current
 	for point in points:
