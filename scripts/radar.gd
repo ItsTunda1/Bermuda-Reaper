@@ -36,7 +36,7 @@ func update_radar(points: Array):
 			print(angle_to_origin)
 			print(wiper_angle)
 			print("==================")
-			if (abs(angle_to_origin - wiper_angle) <= 10):
+			if (abs(angle_to_origin - wiper_angle) <= 1.0):
 				var dot = RadarDotScene.instantiate()
 				radar_container.add_child(dot)
 				dot.position = convert_to_radar_position(point)
