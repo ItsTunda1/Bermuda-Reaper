@@ -28,14 +28,14 @@ func update_radar(points: Array):
 
 	# Add current
 	for point in points:
-		if (boat.position.distance_squared_to(Vector2(point))/1000 <= 1000 || true):
+		if (boat.position.distance_squared_to(Vector2(point))/1000 <= 1000):
 			# Check angle (show if overlap with wiper)
 			var angle_to_origin = -rad_to_deg(point.angle()) + 270.0;	# Flip & Offset by 90 so that it matches the wiper
-			if (angle_to_origin >= 360 || true):
+			if (angle_to_origin >= 360):
 				angle_to_origin = 0.0;
-			print(angle_to_origin)
-			print(wiper_angle)
-			print("==================")
+			#print(angle_to_origin)
+			#print(wiper_angle)
+			#print("==================")
 			if (abs(angle_to_origin - wiper_angle) <= 1.0):
 				var dot = RadarDotScene.instantiate()
 				radar_container.add_child(dot)
@@ -63,6 +63,6 @@ func _process(delta):
 	
 	# Move Wiper
 	wiper.rotation_degrees = wiper_angle;
-	wiper_angle += 2.0*0;
+	wiper_angle += 2.0;
 	if (wiper_angle >= 360.0):
 		wiper_angle = 0.0;
