@@ -7,12 +7,12 @@ var n: int = 3; # Big triangle size /_\
 var triangle_size: int = 300;	# Small tri sizes
 var offset: Vector2 = Vector2(400, 400);
 
-var dist_x = triangle_size/2;
+var dist_x = triangle_size/4;
 var dist_y = triangle_size*sqrt(3)/4;
 func place_triangles(layer: int, n: int, offset_x: int):
 	for i in layer:
 		# Spawning
-		var tile = preload("res://scenes/fish/fish2.tscn").instantiate();
+		var tile = preload("res://scenes/Game_Map/triangles.tscn").instantiate();
 		
 		# Set dir (mirrored or not)
 		if (i % 2 == 0):

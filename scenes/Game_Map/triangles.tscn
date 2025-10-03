@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bt65j48wxpe1k"]
+
+[ext_resource type="Texture2D" uid="uid://bn5u8scphsxqi" path="res://gfx/waterTriangle.png" id="1_p5adm"]
+
+[node name="Triangles" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_p5adm")

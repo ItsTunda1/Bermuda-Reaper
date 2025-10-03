@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://bmc4m8lm7sqm"]
+[gd_scene load_steps=5 format=3 uid="uid://bmc4m8lm7sqm"]
 
+[ext_resource type="PackedScene" uid="uid://buvqe8rguy2h8" path="res://scenes/Game_Map/Game_Map.tscn" id="1_r6nxf"]
 [ext_resource type="PackedScene" uid="uid://tomt7ssrdyx8" path="res://scenes/boat/boat.tscn" id="1_t2lbs"]
 [ext_resource type="PackedScene" uid="uid://bi4cfniu4yk6g" path="res://UI/Radar.tscn" id="2_7dkdp"]
 [ext_resource type="PackedScene" uid="uid://bcsbwff13a2p2" path="res://scenes/fish/fish_base.tscn" id="3_2j53y"]
 
 [node name="Game" type="Node2D"]
+
+[node name="GameMap" parent="." instance=ExtResource("1_r6nxf")]
 
 [node name="Boat" parent="." instance=ExtResource("1_t2lbs")]
 
