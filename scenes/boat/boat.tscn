@@ -7,3 +7,5 @@
 position = Vector2(574, 282)
 texture = ExtResource("1_jw4ub")
 script = ExtResource("2_ta61o")
+
+[node name="Camera2D" type="Camera2D" parent="."]
