@@ -28,10 +28,10 @@ func update_radar(points: Array):
 
 	# Add current
 	for point in points:
-		if (boat.position.distance_squared_to(Vector2(point))/1000 <= 1000):
+		if (boat.position.distance_squared_to(Vector2(point))/1000 <= 1000 || true):
 			# Check angle (show if overlap with wiper)
 			var angle_to_origin = -rad_to_deg(point.angle()) + 270.0;	# Flip & Offset by 90 so that it matches the wiper
-			if (angle_to_origin >= 360):
+			if (angle_to_origin >= 360 || true):
 				angle_to_origin = 0.0;
 			print(angle_to_origin)
 			print(wiper_angle)
@@ -43,24 +43,26 @@ func update_radar(points: Array):
 
 func convert_to_radar_position(world_offset: Vector2) -> Vector2:
 	var normalized = world_offset / radar_range  # range -1 to 1
-	var radar_pos = (normalized * (radar_size * 0.5))
+	var radar_pos = (normalized * (radar_size * 0.5)) + radar_size * 0.5*0
 	return radar_pos
 	
 	
 func _process(delta):
-	var player_pos = Vector2(0, 0)
+	var player_pos = boat.position
 	
 	
 	var points = []
 
 	for obj in get_tree().get_nodes_in_group("radar_objects"):
 		var offset = obj.global_position - player_pos
+		offset.x += 550
+		offset.y += 500
 		points.append(offset)
 
 	update_radar(points)
 	
 	# Move Wiper
 	wiper.rotation_degrees = wiper_angle;
-	wiper_angle += 2.0;
+	wiper_angle += 2.0*0;
 	if (wiper_angle >= 360.0):
 		wiper_angle = 0.0;

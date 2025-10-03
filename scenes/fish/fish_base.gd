@@ -32,8 +32,8 @@ func Radar_Behavior():
 	
 	
 	
-func _process(_delta):
-	Swim_Behavior()
+#func _process(_delta):
+#	Swim_Behavior()
 	
 	
 # Calc the min and max range
