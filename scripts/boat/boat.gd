@@ -3,23 +3,35 @@ extends Sprite2D
 class_name boat
 var speed = 3
 
+var use_keyboard=true
+var use_mouse=false
 
 func _ready():
 	pass;
 
 func get_input_vector():
 	var input_vector = Vector2.ZERO
-	if Input.is_action_pressed("ui_right") and not Input.is_action_pressed("ui_left"):
-		input_vector.x += 1
-		flip_h = false  # 朝右时不翻转
-	if Input.is_action_pressed("ui_left") and not Input.is_action_pressed("ui_right"):
-		input_vector.x -= 1
-		flip_h = true   # 朝左时翻转
-	if Input.is_action_pressed("ui_down") and not Input.is_action_pressed("ui_up"):
-		input_vector.y += 1
+	# Keyboard input
+	if use_keyboard:
+		if Input.is_action_pressed("ui_right") and not Input.is_action_pressed("ui_left"):
+			input_vector.x += 1
+
+		if Input.is_action_pressed("ui_left") and not Input.is_action_pressed("ui_right"):
+			input_vector.x -= 1
+
+		if Input.is_action_pressed("ui_down") and not Input.is_action_pressed("ui_up"):
+			input_vector.y += 1
 		
-	if Input.is_action_pressed("ui_up") and not Input.is_action_pressed("ui_down"):
-		input_vector.y -= 1
+		if Input.is_action_pressed("ui_up") and not Input.is_action_pressed("ui_down"):
+			input_vector.y -= 1
+		
+	# Follow the mouse when no keyboard input is active
+	if use_mouse:
+		var mouse_pos = get_global_mouse_position()
+		var to_mouse = mouse_pos - global_position
+		# Avoid jitter when already at/near the mouse
+		if to_mouse.length() > 1.0:
+			input_vector = to_mouse
 	
 	return input_vector
 	
