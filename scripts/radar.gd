@@ -4,7 +4,6 @@ extends Control
 
 var RadarDotScene = preload("res://UI/RadarDot.tscn")
 @onready var radar_container = $CanvasLayer/RadarContainer
-var radar_points = [Vector2(10, 20), Vector2(-50, 30)]
 
 # Wiper Anim
 var wiper_angle: float = 0.0;
@@ -50,7 +49,6 @@ func convert_to_radar_position(world_offset: Vector2) -> Vector2:
 	
 func _process(delta):
 	var player_pos = Vector2(0, 0)
-	radar_points[0].x += 10;
 	
 	
 	var points = []
