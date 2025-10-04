@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwxvtxxfnro23"]
+
+[ext_resource type="Texture2D" uid="uid://cwupvcp18ufgo" path="res://UI/depthBar.png" id="1_gurv4"]
+[ext_resource type="Script" uid="uid://jfmlo8ivvfpf" path="res://scripts/UI/depth_line.gd" id="2_0x7pr"]
+
+[node name="DepthLine" type="NinePatchRect"]
+offset_right = 16.0
+offset_bottom = 101.0
+texture = ExtResource("1_gurv4")
+patch_margin_top = 5
+patch_margin_bottom = 5
+axis_stretch_vertical = 1
+script = ExtResource("2_0x7pr")
+
+[node name="Depth" type="Label" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_right = 56.0
+offset_bottom = 22.3333
+text = "100 ft"
+horizontal_alignment = 2

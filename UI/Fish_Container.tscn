@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://b80olfhie1syq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w6b5f"]
+bg_color = Color(1.10701e-06, 0.278143, 0.400463, 1)
+
+[node name="FishContainer" type="Panel"]
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_w6b5f")

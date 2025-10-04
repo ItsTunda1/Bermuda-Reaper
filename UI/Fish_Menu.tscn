@@ -1,28 +1,31 @@
-[gd_scene load_steps=5 format=3 uid="uid://dojl217eaeyuj"]
+[gd_scene load_steps=3 format=3 uid="uid://dojl217eaeyuj"]
 
-[ext_resource type="Texture2D" uid="uid://dab12qhnv6brf" path="res://gfx/icon.svg" id="1_w3fqb"]
-[ext_resource type="Script" uid="uid://odccfgo2vuq3" path="res://scripts/fish/fish.gd" id="1_w6b5f"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w6b5f"]
-bg_color = Color(1.10701e-06, 0.278143, 0.400463, 1)
+[ext_resource type="Script" uid="uid://ca0f2kxxd1h0x" path="res://UI/fish_menu.gd" id="1_w6b5f"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nqses"]
 bg_color = Color(0.0466641, 2.9077e-05, 0.188685, 1)
 
-[node name="menu" type="Control"]
+[node name="menu" type="Control" node_paths=PackedStringArray("fishTypesBox", "pingBox", "depthContainer", "depthBarContainer", "mainSeparator")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_w6b5f")
+fishTypesBox = NodePath("ScrollContainer/Main Separator/Fish Types")
+pingBox = NodePath("ScrollContainer/Main Separator/Radar Ping Display")
+depthContainer = NodePath("ScrollContainer/Main Separator/Depth")
+depthBarContainer = NodePath("ScrollContainer/Main Separator/Depth/Depths")
+mainSeparator = NodePath("ScrollContainer/Main Separator")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_bottom = 1688.0
+offset_right = -950.0
+offset_bottom = -544.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
@@ -31,53 +34,25 @@ horizontal_scroll_mode = 0
 [node name="Main Separator" type="HBoxContainer" parent="ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+size_flags_vertical = 3
 
-[node name="BoxContainer" type="BoxContainer" parent="ScrollContainer/Main Separator"]
+[node name="Radar Ping Display" type="BoxContainer" parent="ScrollContainer/Main Separator"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.5
 
-[node name="Radar View" type="Panel" parent="ScrollContainer/Main Separator/BoxContainer"]
+[node name="Depths" type="Panel" parent="ScrollContainer/Main Separator/Radar Ping Display"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_nqses")
 
 [node name="Fish Types" type="VBoxContainer" parent="ScrollContainer/Main Separator"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.6
-
-[node name="Fish" type="Panel" parent="ScrollContainer/Main Separator/Fish Types"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_styles/panel = SubResource("StyleBoxFlat_w6b5f")
-
-[node name="Fish2" type="Panel" parent="ScrollContainer/Main Separator/Fish Types"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_styles/panel = SubResource("StyleBoxFlat_w6b5f")
-
-[node name="Fish3" type="Panel" parent="ScrollContainer/Main Separator/Fish Types"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_styles/panel = SubResource("StyleBoxFlat_w6b5f")
-
-[node name="Fish4" type="Panel" parent="ScrollContainer/Main Separator/Fish Types"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_styles/panel = SubResource("StyleBoxFlat_w6b5f")
-
-[node name="Fish5" type="Panel" parent="ScrollContainer/Main Separator/Fish Types"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_styles/panel = SubResource("StyleBoxFlat_w6b5f")
+theme_override_constants/separation = 0
 
 [node name="Depth" type="BoxContainer" parent="ScrollContainer/Main Separator"]
-custom_minimum_size = Vector2(0, 2000)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.8
@@ -86,9 +61,3 @@ size_flags_stretch_ratio = 0.8
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_nqses")
-
-[node name="fish" type="Sprite2D" parent="ScrollContainer/Main Separator/Depth/Depths"]
-position = Vector2(240, 486)
-texture = ExtResource("1_w3fqb")
-script = ExtResource("1_w6b5f")
-metadata/_custom_type_script = "uid://odccfgo2vuq3"
