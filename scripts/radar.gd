@@ -47,6 +47,18 @@ func convert_to_radar_position(world_offset: Vector2) -> Vector2:
 	return radar_pos
 	
 	
+
+var fish_types = {"A": 10, "B": 15}
+var radar_depth = 12
+func Grab_Fish():
+	var possible_fish;
+	for fish in fish_types:
+		if (radar_depth >= fish):
+			possible_fish.append(fish)
+	
+	# random pick 2-3
+	
+	
 func _process(delta):
 	var player_pos = boat.position
 	
