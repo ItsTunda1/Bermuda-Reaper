@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://dojl217eaeyuj"]
+[gd_scene load_steps=4 format=3 uid="uid://dojl217eaeyuj"]
 
 [ext_resource type="Script" uid="uid://ca0f2kxxd1h0x" path="res://UI/fish_menu.gd" id="1_w6b5f"]
+[ext_resource type="Texture2D" uid="uid://cwupvcp18ufgo" path="res://UI/depthBar.png" id="2_w3fqb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nqses"]
 bg_color = Color(0.0466641, 2.9077e-05, 0.188685, 1)
@@ -49,6 +50,33 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.6
 theme_override_constants/separation = 0
+
+[node name="Fish1" type="HBoxContainer" parent="ScrollContainer/Main Separator/Fish Types"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="ScrollContainer/Main Separator/Fish Types/Fish1"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="ScrollContainer/Main Separator/Fish Types/Fish1/Panel"]
+texture = ExtResource("2_w3fqb")
+offset = Vector2(50, 25)
+
+[node name="Panel2" type="Panel" parent="ScrollContainer/Main Separator/Fish Types/Fish1"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ScrollContainer/Main Separator/Fish Types/Fish1/Panel2"]
+layout_mode = 0
+offset_right = 120.0
+offset_bottom = 50.0
+text = "Fish 1"
+vertical_alignment = 1
+
+[node name="Panel3" type="Panel" parent="ScrollContainer/Main Separator/Fish Types/Fish1"]
+layout_mode = 2
+size_flags_horizontal = 3
 
 [node name="Depth" type="BoxContainer" parent="ScrollContainer/Main Separator"]
 layout_mode = 2
