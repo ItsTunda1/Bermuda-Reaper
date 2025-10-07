@@ -20,8 +20,8 @@ class_name FishMenu
 @export var depthHeight := 100.0;
 @export var cosmeticDepthPerTick := 5.0;
 
-func _ready():
-	prep_fish_menu(depth);
+#func _ready():
+	#prep_fish_menu(depth);
 
 func prep_fish_menu(inDepth):
 	mainSeparator.size.y = depthHeight * inDepth;
