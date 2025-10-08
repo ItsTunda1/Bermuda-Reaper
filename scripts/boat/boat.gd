@@ -56,7 +56,7 @@ func update_speed():
 var is_mouse_down = false  # Flag to check if the mouse was just pressed
 func _process(delta):
 	update_speed()
-	move_in_direction();
+	#move_in_direction();
 	
 	# radar call for mouse down
 	# Check if the left mouse button is pressed and not already triggered
@@ -73,8 +73,8 @@ func move_in_direction():
 	position += move_dir * speed;
 	if move_dir != Vector2(0.,0.):
 		rotation=move_dir.angle()
-	print("Move dir: ", move_dir)
-	print("Speed: ", speed)
+	#print("Move dir: ", move_dir)
+	#print("Speed: ", speed)
 	pass;
 
 

@@ -9,6 +9,7 @@ var mean: int = 100;
 # Ranges
 var min: int;
 var max: int;
+@export var object = true;
 
 func NormalDistribution(x: int):
 	# 1.0 to keep float
@@ -19,7 +20,8 @@ func _ready():
 	print(NormalDistribution(101));
 	
 	# Show on Radar
-	add_to_group("radar_objects")
+	if (object):
+		add_to_group("radar_objects")
 	
 func Swim_Behavior():
 	#print("Fishy")

@@ -30,9 +30,17 @@ func update_radar(points: Array):
 	for point in points:
 		if (boat.position.distance_squared_to(Vector2(point))/1000 <= 1000):
 			# Check angle (show if overlap with wiper)
-			var angle_to_origin = -rad_to_deg(point.angle()) + 270.0;	# Flip & Offset by 90 so that it matches the wiper
+			#point += boat.position
+			point.x -= 550
+			point.y -= 500
+			print(point)
+			print(rad_to_deg(point.angle()))
+			print("=============")
+			var angle_to_origin = rad_to_deg(point.angle()) + 270.0+50;	# Flip & Offset by 90 so that it matches the wiper
 			if (angle_to_origin >= 360):
 				angle_to_origin = 0.0;
+			point.x += 550
+			point.y += 500
 			#print(angle_to_origin)
 			#print(wiper_angle)
 			#print("==================")
@@ -43,7 +51,7 @@ func update_radar(points: Array):
 
 func convert_to_radar_position(world_offset: Vector2) -> Vector2:
 	var normalized = world_offset / radar_range  # range -1 to 1
-	var radar_pos = (normalized * (radar_size * 0.5)) + radar_size * 0.5*0
+	var radar_pos = (normalized * (radar_size * 0.5))
 	return radar_pos
 	
 	
