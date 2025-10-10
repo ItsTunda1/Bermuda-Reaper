@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkrb6iyrcosp5"]
+
+[ext_resource type="Script" uid="uid://b60w461nsxoxk" path="res://scripts/fish/Types/Lion_Fish.gd" id="1_vb264"]
+[ext_resource type="Texture2D" uid="uid://dab12qhnv6brf" path="res://gfx/icon.svg" id="2_6v8kc"]
+
+[node name="LionFish" type="Node2D"]
+position = Vector2(582, 300)
+script = ExtResource("1_vb264")
+fish_name = "Lion Fish"
+min = 100
+max = 200
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_6v8kc")

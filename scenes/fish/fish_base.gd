@@ -1,14 +1,16 @@
 extends Node2D
 
+class_name Fish_Base
 
-var fish_name: String;
+
+@export var fish_name: String;
 # Normal Distribution
 var std: float = 10;
 var mean: int = 100;
 
 # Ranges
-var min: int;
-var max: int;
+@export var min: int;
+@export var max: int;
 @export var object = true;
 
 func NormalDistribution(x: int):
