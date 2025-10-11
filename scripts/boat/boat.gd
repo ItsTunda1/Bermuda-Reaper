@@ -1,4 +1,4 @@
-extends Sprite2D
+extends Area2D
 
 class_name boat
 const speed_lower=0.
@@ -56,7 +56,7 @@ func update_speed():
 var is_mouse_down = false  # Flag to check if the mouse was just pressed
 func _process(delta):
 	update_speed()
-	#move_in_direction();
+	move_in_direction();
 	
 	# radar call for mouse down
 	# Check if the left mouse button is pressed and not already triggered

@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://buvqe8rguy2h8" path="res://scenes/Game_Map/Game_Map.tscn" id="1_r6nxf"]
 [ext_resource type="PackedScene" uid="uid://tomt7ssrdyx8" path="res://scenes/boat/boat.tscn" id="1_t2lbs"]
 [ext_resource type="PackedScene" uid="uid://bi4cfniu4yk6g" path="res://UI/Radar.tscn" id="2_7dkdp"]
-[ext_resource type="PackedScene" uid="uid://bcsbwff13a2p2" path="res://scenes/fish/fish_base.tscn" id="3_2j53y"]
+[ext_resource type="PackedScene" uid="uid://dkrb6iyrcosp5" path="res://scripts/fish/Types/Lion_Fish.tscn" id="4_r6nxf"]
 
 [node name="Game" type="Node2D"]
 
@@ -13,11 +13,5 @@
 
 [node name="Radar" parent="." instance=ExtResource("2_7dkdp")]
 
-[node name="FishBase" parent="." instance=ExtResource("3_2j53y")]
-position = Vector2(684, 205)
-
-[node name="FishBase2" parent="." instance=ExtResource("3_2j53y")]
-position = Vector2(404, 352)
-
-[node name="FishBase3" parent="." instance=ExtResource("3_2j53y")]
-position = Vector2(510, 97)
+[node name="LionFish" parent="." instance=ExtResource("4_r6nxf")]
+position = Vector2(965, 428)
