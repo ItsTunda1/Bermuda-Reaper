@@ -33,9 +33,9 @@ func update_radar(points: Array):
 			#point += boat.position
 			point.x -= 550
 			point.y -= 500
-			print(point)
-			print(rad_to_deg(point.angle()))
-			print("=============")
+			#print(point)
+			#print(rad_to_deg(point.angle()))
+			#print("=============")
 			var angle_to_origin = rad_to_deg(point.angle()) + 270.0+50;	# Flip & Offset by 90 so that it matches the wiper
 			if (angle_to_origin >= 360):
 				angle_to_origin = 0.0;
