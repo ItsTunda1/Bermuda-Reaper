@@ -28,13 +28,22 @@ func _process(_delta):
 	#Swim_Behavior()
 	Radar_Behavior()
 	timer += _delta;
+	
+	# Mouse clicks for entering diving game
+	if (Input.is_action_just_pressed("Init_Dive")):
+		if (overlap_boat == true):
+			print("DIVE!!!!!");
 
+
+
+var overlap_boat = false;
 
 func _on_area_entered(area: Area2D) -> void:
 	if (area is boat):
-		print("Entered")
-
+		#print("Entered")
+		overlap_boat = true;
 
 func _on_area_exited(area: Area2D) -> void:
 	if (area is boat):
-		print("Exited")
+		#print("Exited")
+		overlap_boat = false;
