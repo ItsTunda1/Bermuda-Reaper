@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://5qlbsgrt6d3h"]
+
+[ext_resource type="Script" uid="uid://ngju5qy8ehr4" path="res://scenes/minigame/minigame.gd" id="1_p416r"]
+[ext_resource type="Texture2D" uid="uid://bp7a3d163jaar" path="res://gfx/diver.svg" id="2_0pat7"]
+[ext_resource type="PackedScene" uid="uid://7sg5op7iungi" path="res://scenes/minigame/fish_sideview.tscn" id="3_64p31"]
+[ext_resource type="Script" uid="uid://bx42sgst6foey" path="res://scenes/minigame/diver.gd" id="3_a7b5v"]
+
+[node name="Minigame" type="Node2D"]
+script = ExtResource("1_p416r")
+
+[node name="Fish1" parent="." instance=ExtResource("3_64p31")]
+position = Vector2(140, 276)
+
+[node name="Fish2" parent="." instance=ExtResource("3_64p31")]
+position = Vector2(906, 253)
+
+[node name="Fish3" parent="." instance=ExtResource("3_64p31")]
+position = Vector2(446, 230)
+
+[node name="Diver" type="Sprite2D" parent="."]
+position = Vector2(553, 111)
+texture = ExtResource("2_0pat7")
+script = ExtResource("3_a7b5v")

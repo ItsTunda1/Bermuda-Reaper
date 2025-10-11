@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://7sg5op7iungi"]
+
+[ext_resource type="Texture2D" uid="uid://7eqtcwhogjoi" path="res://gfx/fish/normalfish.svg" id="1_dfups"]
+[ext_resource type="Script" uid="uid://bv3he7rr2h3s1" path="res://scenes/minigame/fish_sideview.gd" id="1_krtdu"]
+
+[node name="FishSideview" type="Sprite2D"]
+texture = ExtResource("1_dfups")
+script = ExtResource("1_krtdu")
+
+[node name="Area2D" type="Area2D" parent="."]

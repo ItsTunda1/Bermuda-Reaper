@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://dwn2rn13jc1yu"]
+
+[ext_resource type="Script" uid="uid://cd300wuhmt15q" path="res://scripts/side_view.gd" id="1_rstb6"]
+[ext_resource type="Texture2D" uid="uid://chrekoewhxgym" path="res://gfx/boat_side.svg" id="2_vgqqw"]
+[ext_resource type="Texture2D" uid="uid://b7nyopeh2nsx6" path="res://gfx/anchor.svg" id="3_h0yq2"]
+[ext_resource type="PackedScene" uid="uid://5qlbsgrt6d3h" path="res://scenes/minigame/minigame.tscn" id="4_h0yq2"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_rstb6")
+
+[node name="sea" type="Node2D" parent="."]
+
+[node name="sky" type="ColorRect" parent="sea"]
+offset_left = -25.0
+offset_right = 1175.0
+offset_bottom = 700.0
+color = Color(0.77, 0.8965, 1, 1)
+
+[node name="sea_down" type="ColorRect" parent="sea"]
+offset_left = -25.0
+offset_top = 100.0
+offset_right = 1175.0
+offset_bottom = 700.0
+color = Color(0, 0.55, 1, 1)
+
+[node name="wave" type="Sprite2D" parent="sea"]
+
+[node name="boat_side" type="Sprite2D" parent="."]
+position = Vector2(600, 80)
+texture = ExtResource("2_vgqqw")
+
+[node name="anchor" type="Sprite2D" parent="."]
+position = Vector2(623, 615)
+scale = Vector2(0.6875, 0.6875)
+texture = ExtResource("3_h0yq2")
+
+[node name="Minigame" parent="." instance=ExtResource("4_h0yq2")]
