@@ -15,3 +15,4 @@
 
 [node name="LionFish" parent="." instance=ExtResource("4_r6nxf")]
 position = Vector2(965, 428)
+object = null
