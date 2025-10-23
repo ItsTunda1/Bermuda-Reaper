@@ -14,6 +14,14 @@ func _ready():
 	# testing if cursor touch the boat. If touch, stop moving forward the cursor
 	#mouse_entered.connect(func(): hovering = true)
 	#mouse_exited.connect(func(): hovering = false)
+	var file = FileAccess.open("user://save_game.dat", FileAccess.WRITE)
+	file.store_8(123);
+	file.store_8(8);
+	file = FileAccess.open("user://save_game.dat", FileAccess.READ)
+	var content = file.get_8()
+	print(content)
+	content = file.get_8()
+	print(content)
 	pass
 
 func get_input_vector():
