@@ -33,7 +33,7 @@ func _process(_delta):
 	if (Input.is_action_just_pressed("Init_Dive")):
 		if (overlap_boat == true):
 			print("DIVE!!!!!");
-			get_tree().change_scene_to_file("");
+			get_tree().change_scene_to_file("res://scenes/minigame/minigame.tscn");
 
 
 
