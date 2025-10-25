@@ -21,3 +21,6 @@ position = Vector2(446, 230)
 position = Vector2(553, 111)
 texture = ExtResource("2_0pat7")
 script = ExtResource("3_a7b5v")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
